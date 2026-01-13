@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<title>Hello from Flask</title>
+<h1>Jacob's Super Duper Cool Snake Project - Home</h1>
+<nav>
+    <a href="{{url_for('snake1')}}">Snake 1</a>
+</nav>
+<nav>
+    <a href="{{url_for('snake2')}}">Snake 2</a>
+</nav>
+<nav>
+    <a href="{{url_for('snake3')}}">Snake 3</a>
+</nav>
+<nav>
+    <a href="{{url_for('snake4')}}">Snake 4</a>
+</nav>
+<nav>
+    <a href="{{url_for('snake5')}}">Snake 5</a>
+</nav>
+<nav>
+    <a href="{{url_for('compare')}}">Compare</a>
+    <p>Previously seen snake lengths:</p>
+    {% if compare %}
+        {% for name, lengths in dictionary.items() %}
+            {% for length in lengths %}
+                <div style="display: inline">{{name}}:</div>
+                {% for i in range(length) %}
+                    <div style="display: inline">~</div>
+                {% endfor %}
+                <div></div>
+            {% endfor %}
+            <div></div>
+        {% endfor %}
+    {% endif %}
+</nav>
