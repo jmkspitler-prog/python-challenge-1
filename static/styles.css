@@ -66,3 +66,8 @@ button:hover {
   align-items: center;
   gap: 1rem;
 }
+
+.invisible {
+  color: white;
+}
+
