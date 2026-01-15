@@ -1,0 +1,68 @@
+/* ---------- Reset ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+body > div {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+/* ---------- Column Container ---------- */
+.column {
+  width: 100%;
+  max-width: 720px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 4rem 1.5rem;
+  gap: 2.5rem;
+}
+
+/* ---------- Typography ---------- */
+h1 {
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+p {
+  max-width: 60ch;
+  text-align: center;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
+/* ---------- Button ---------- */
+button {
+  background: none;
+  border: 1px solid #111;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #111;
+  color: #fff;
+}
+
+.links {
+  display: flex;
+  flex-direction: column; /* THIS is the key */
+  align-items: center;
+  gap: 1rem;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jacob's Super Duper Cool Snake Project - Home</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
+    <meta content="~~~~~~~">
+</head>
+<body>
+    <div>
+        <h1>Jacob's Super Duper Cool Snake Project - Home</h1>
+    </div>
+
+    <div class="links">
+        <div>
+            <a href="{{url_for('snake', id=0)}}">Anaconda</a>
+        </div>
+        <div>
+            <a href="{{url_for('snake', id=1)}}">Racer</a>
+        </div>
+        <div>
+            <a href="{{url_for('snake', id=2)}}">Black Mamba</a>
+        </div>
+        <div>
+            <a href="{{url_for('snake', id=3)}}">Copperhead</a>
+        </div>
+        <div>
+            <a href="{{url_for('snake', id=4)}}">Cottonmouth</a>
+        </div>
+    </div>
+    <div>
+        <a href="{{url_for('compare')}}">Compare!</a>
+        <p>Previously seen snake lengths:</p>
+        
+        {% if compare %}
+            {% for snake in snakes %}
+                {% for length in snake[2] %}
+                    <nav>{{snake[0]}}: {{length}}</nav>
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
